@@ -239,9 +239,19 @@ function Resolve-Entry {
     $ePageUrl  = EP $Entry 'page_url'
     $eRegex    = EP $Entry 'regex'
 
-    # Already fully resolved
+    # Already fully resolved (has both url and file)
     if ($eUrl -and $eFile) {
         return [pscustomobject]@{ url = $eUrl; file = $eFile; size = -1 }
+    }
+
+    # Has URL but no file - try to derive filename from URL
+    if ($eUrl) {
+        $derivedFile = Split-Path $eUrl -Leaf
+        # If URL ends with / or has no filename, or is a page not a file
+        if (-not $derivedFile -or $derivedFile -eq "" -or $derivedFile -notmatch '\.(iso|img|ova|zip)$') {
+            $derivedFile = "downloaded.iso"
+        }
+        return [pscustomobject]@{ url = $eUrl; file = $derivedFile; size = -1 }
     }
 
     # Direct URL with explicit resolver
@@ -731,9 +741,17 @@ function Get-NodeItems {
         return $null -ne $Obj.PSObject.Properties[$Name]
     }
 
+    # Helper to get display label for a property
+    function Get-Label($Prop) {
+        if ($Prop.Value -is [System.Management.Automation.PSCustomObject] -and $Prop.Value.label) {
+            return $Prop.Value.label
+        }
+        return $Prop.Name
+    }
+
     if (HasProp $Node 'children') {
         foreach ($ch in $Node.children.PSObject.Properties) {
-            $items.Add([pscustomobject]@{ Name = $ch.Name; Type = "submenu"; Entry = $ch.Value })
+            $items.Add([pscustomobject]@{ Name = (Get-Label $ch); Type = "submenu"; Entry = $ch.Value })
         }
     }
 
@@ -765,16 +783,30 @@ function Get-NodeItems {
         }
     }
 
-    $skipKeys = @('label','type','children','releases','variants')
+    # Handle 'latest' and 'install' keys that contain direct entries
+    $directKeys = @('latest', 'install')
+    foreach ($key in $directKeys) {
+        if (HasProp $Node $key) {
+            $resolved = Resolve-Entry $Node.$key
+            if ($resolved) {
+                $items.Add([pscustomobject]@{ Name = $key; Type = "download"; Entry = $resolved })
+            }
+        }
+    }
+
+    $skipKeys = @('label','type','children','releases','variants','latest','install')
     foreach ($prop in $Node.PSObject.Properties) {
         if ($prop.Name -in $skipKeys) { continue }
         $val = $prop.Value
         if ($val -is [System.Management.Automation.PSCustomObject]) {
             $resolved = Resolve-Entry $val
             if ($resolved) {
-                $items.Add([pscustomobject]@{ Name = $prop.Name; Type = "download"; Entry = $resolved })
+                $items.Add([pscustomobject]@{ Name = (Get-Label $prop); Type = "download"; Entry = $resolved })
             } else {
-                $items.Add([pscustomobject]@{ Name = $prop.Name; Type = "submenu"; Entry = $val })
+                # Check if this property has children/releases/variants/latest itself
+                if ((HasProp $val 'children') -or (HasProp $val 'releases') -or (HasProp $val 'variants') -or (HasProp $val 'latest') -or (HasProp $val 'install')) {
+                    $items.Add([pscustomobject]@{ Name = (Get-Label $prop); Type = "submenu"; Entry = $val })
+                }
             }
         }
     }
@@ -874,16 +906,36 @@ try {
     exit 1
 }
 
-# Build main menu from sources
+# Build main menu from ALL top-level sections in sources.json
 $mainItems = [System.Collections.Generic.List[pscustomobject]]::new()
 
-foreach ($prop in $Sources.linux.PSObject.Properties) {
-    if ($prop.Name -eq 'label') { continue }
+# Add Linux as a single big folder containing all linux.* subsections
+if ($Sources.linux -is [System.Management.Automation.PSCustomObject]) {
+    $mainItems.Add([pscustomobject]@{ 
+        Name  = "Linux"
+        Type  = "submenu"
+        Entry = $Sources.linux
+        Exit  = $false 
+    })
+}
+
+# Add all other top-level sections (BSD, windows, recovery_tools, privacy_security, etc.)
+$skipTopLevel = @('schema_version', 'generated', 'notes', 'linux')
+foreach ($prop in $Sources.PSObject.Properties) {
+    if ($prop.Name -in $skipTopLevel) { continue }
     if ($prop.Value -is [System.Management.Automation.PSCustomObject]) {
-        $mainItems.Add([pscustomobject]@{ Name = $prop.Name; Type = "submenu"; Entry = $prop.Value; Exit = $false })
+        # Use label if available, otherwise capitalize the key name
+        $label = if ($prop.Value.label) { $prop.Value.label } else { (Get-Culture).TextInfo.ToTitleCase($prop.Name -replace '_', ' ') }
+        $mainItems.Add([pscustomobject]@{ 
+            Name  = $label
+            Type  = "submenu"
+            Entry = $prop.Value
+            Exit  = $false 
+        })
     }
 }
 
+# Add utility options
 $mainItems.Add([pscustomobject]@{ Name = "View Drive Contents";  Type = "util"; Exit = $false })
 $mainItems.Add([pscustomobject]@{ Name = "Delete ISO from Drive"; Type = "util"; Exit = $false })
 $mainItems.Add([pscustomobject]@{ Name = "Download Queue";        Type = "util"; Exit = $false })
