@@ -1,4 +1,6 @@
 # update-chan
+![version](https://img.shields.io/badge/version-9.0-blue)
+
 (currently a) Windows Powershell utility to fetch and install multiple operating system ISO installers onto any Ventoy disk and keep them updated. Simple, easy, and clean!
 
 <img width="1194" height="592" alt="{A3F079A3-3A7F-4DD4-9551-48C13B79AC16}" src="https://github.com/user-attachments/assets/0f3264ab-c2ef-4afc-b33c-3838ef938284" />
@@ -12,6 +14,10 @@ Clone it by getting Git or Git For Windows and running `git clone https://github
 If it gives you an ExecutionPolicy error saying you can't run .ps1 files on your computer, set your ExecutionPolicy for `update-chan.ps1` to Unsigned, or else it won't run. Alternatively, set your system-wide ExecutionPolicy to Unsigned, but that's risky. Find out how to do this [here.](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.6)
 
 3. Enjoy! All the options should be pretty clear.
+
+# some entries give me 404s!
+I admit fault for this. Some URLs may not be treated well with time and may go down. In that case, either fix it yourself in the sources.json and make a pull request, or make an issue detailing which ISO doesn't download.
+I, or any other contributer, will try to fix the issue as quickly as possible.
 
 # okay, but there aren't enough options!
 The best solution is to contribute! Find out the latest download links for whatever it is you want to get, and add it to the `sources.json` file. Before starting a pull request, ensure that it works and is downloading the latest version, and that you properly categorized it.
