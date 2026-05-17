@@ -14,24 +14,67 @@
           "label": "Ubuntu",
           "releases": {
             "24.04.4": {
-              "desktop": { "url": "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso", "file": "ubuntu-24.04.4-desktop-amd64.iso" },
-              "server":  { "url": "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso", "file": "ubuntu-24.04.4-live-server-amd64.iso" }
+              "desktop": {
+                "url": "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso",
+                "file": "ubuntu-24.04.4-desktop-amd64.iso"
+              },
+              "server": {
+                "url": "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso",
+                "file": "ubuntu-24.04.4-live-server-amd64.iso"
+              }
             },
             "25.10": {
-              "desktop": { "url": "https://releases.ubuntu.com/25.10/ubuntu-25.10-desktop-amd64.iso", "file": "ubuntu-25.10-desktop-amd64.iso" },
-              "server":  { "url": "https://releases.ubuntu.com/25.10/ubuntu-25.10-live-server-amd64.iso", "file": "ubuntu-25.10-live-server-amd64.iso" }
+              "desktop": {
+                "url": "https://releases.ubuntu.com/25.10/ubuntu-25.10-desktop-amd64.iso",
+                "file": "ubuntu-25.10-desktop-amd64.iso"
+              },
+              "server": {
+                "url": "https://releases.ubuntu.com/25.10/ubuntu-25.10-live-server-amd64.iso",
+                "file": "ubuntu-25.10-live-server-amd64.iso"
+              }
             },
             "22.04.5": {
-              "desktop": { "url": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso", "file": "ubuntu-22.04.5-desktop-amd64.iso" },
-              "server":  { "url": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso", "file": "ubuntu-22.04.5-live-server-amd64.iso" }
+              "desktop": {
+                "url": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-desktop-amd64.iso",
+                "file": "ubuntu-22.04.5-desktop-amd64.iso"
+              },
+              "server": {
+                "url": "https://releases.ubuntu.com/jammy/ubuntu-22.04.5-live-server-amd64.iso",
+                "file": "ubuntu-22.04.5-live-server-amd64.iso"
+              }
             }
           }
         },
-        "kubuntu":     { "label": "Kubuntu",      "page_url": "https://cdimage.ubuntu.com/kubuntu/releases/24.04/release/",     "regex": "kubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso" },
-        "xubuntu":     { "label": "Xubuntu",      "page_url": "https://cdimage.ubuntu.com/xubuntu/releases/24.04/release/",     "regex": "xubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso" },
-        "lubuntu":     { "label": "Lubuntu",      "page_url": "https://cdimage.ubuntu.com/lubuntu/releases/24.04/release/",     "regex": "lubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso" },
-        "ubuntu-mate": { "label": "Ubuntu MATE",  "page_url": "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/", "regex": "ubuntu-mate-24\\.04\\.\\d+-desktop-amd64\\.iso" },
-        "ubuntu-budgie": { "label": "Ubuntu Budgie", "page_url": "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/", "regex": "ubuntu-budgie-24\\.04\\.\\d+-desktop-amd64\\.iso" }
+
+        "kubuntu": {
+          "label": "Kubuntu",
+          "page_url": "https://cdimage.ubuntu.com/kubuntu/releases/24.04/release/",
+          "regex": "kubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso"
+        },
+
+        "xubuntu": {
+          "label": "Xubuntu",
+          "page_url": "https://cdimage.ubuntu.com/xubuntu/releases/24.04/release/",
+          "regex": "xubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso"
+        },
+
+        "lubuntu": {
+          "label": "Lubuntu",
+          "page_url": "https://cdimage.ubuntu.com/lubuntu/releases/24.04/release/",
+          "regex": "lubuntu-24\\.04\\.\\d+-desktop-amd64\\.iso"
+        },
+
+        "ubuntu-mate": {
+          "label": "Ubuntu MATE",
+          "page_url": "https://cdimage.ubuntu.com/ubuntu-mate/releases/24.04/release/",
+          "regex": "ubuntu-mate-24\\.04\\.\\d+-desktop-amd64\\.iso"
+        },
+
+        "ubuntu-budgie": {
+          "label": "Ubuntu Budgie",
+          "page_url": "https://cdimage.ubuntu.com/ubuntu-budgie/releases/24.04/release/",
+          "regex": "ubuntu-budgie-24\\.04\\.\\d+-desktop-amd64\\.iso"
+        }
       }
     },
 
@@ -41,21 +84,40 @@
         "debian": {
           "label": "Debian",
           "variants": {
-            "trixie-netinst":   { "url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso",  "file": "debian-13.4.0-amd64-netinst.iso" },
-            "bookworm-netinst": { "url": "https://cdimage.debian.org/cdimage/archive/12.13.0/amd64/iso-cd/debian-12.13.0-amd64-netinst.iso", "file": "debian-12.13.0-amd64-netinst.iso" }
+            "trixie-netinst": {
+              "url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso",
+              "file": "debian-13.4.0-amd64-netinst.iso"
+            },
+
+            "bookworm-netinst": {
+              "url": "https://cdimage.debian.org/cdimage/archive/12.13.0/amd64/iso-cd/debian-12.13.0-amd64-netinst.iso",
+              "file": "debian-12.13.0-amd64-netinst.iso"
+            }
           }
         },
+
         "kali": {
           "label": "Kali Linux",
           "variants": {
-            "live":      { "url": "https://cdimage.kali.org/current/kali-linux-amd64-live.iso",      "file": "kali-linux-amd64-live.iso" },
-            "installer": { "url": "https://cdimage.kali.org/current/kali-linux-amd64-installer.iso", "file": "kali-linux-amd64-installer.iso" }
+            "live": {
+              "url": "https://cdimage.kali.org/current/kali-linux-amd64-live.iso",
+              "file": "kali-linux-amd64-live.iso"
+            },
+
+            "installer": {
+              "url": "https://cdimage.kali.org/current/kali-linux-amd64-installer.iso",
+              "file": "kali-linux-amd64-installer.iso"
+            }
           }
         },
+
         "mx-linux": {
           "label": "MX Linux",
           "variants": {
-            "xfce": { "page_url": "https://sourceforge.net/projects/mx-linux/files/Final/MX-24.3/", "regex": "MX-24\\.3_x64\\.iso" }
+            "xfce": {
+              "page_url": "https://sourceforge.net/projects/mx-linux/files/Final/MX-24.3/",
+              "regex": "MX-24\\.3_x64\\.iso"
+            }
           }
         }
       }
@@ -66,19 +128,38 @@
       "children": {
         "arch": {
           "label": "Arch Linux",
-          "latest": { "url": "https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso", "file": "archlinux-x86_64.iso" }
+          "latest": {
+            "url": "https://geo.mirror.pkgbuild.com/iso/latest/archlinux-x86_64.iso",
+            "file": "archlinux-x86_64.iso"
+          }
         },
+
         "manjaro": {
           "label": "Manjaro",
           "variants": {
-            "kde":   { "url": "https://download.manjaro.org/kde/latest/manjaro-kde-latest.iso",   "file": "manjaro-kde-latest.iso" },
-            "gnome": { "url": "https://download.manjaro.org/gnome/latest/manjaro-gnome-latest.iso", "file": "manjaro-gnome-latest.iso" },
-            "xfce":  { "url": "https://download.manjaro.org/xfce/latest/manjaro-xfce-latest.iso",  "file": "manjaro-xfce-latest.iso" }
+            "kde": {
+              "url": "https://download.manjaro.org/kde/latest/manjaro-kde-latest.iso",
+              "file": "manjaro-kde-latest.iso"
+            },
+
+            "gnome": {
+              "url": "https://download.manjaro.org/gnome/latest/manjaro-gnome-latest.iso",
+              "file": "manjaro-gnome-latest.iso"
+            },
+
+            "xfce": {
+              "url": "https://download.manjaro.org/xfce/latest/manjaro-xfce-latest.iso",
+              "file": "manjaro-xfce-latest.iso"
+            }
           }
         },
+
         "endeavouros": {
           "label": "EndeavourOS",
-          "latest": { "page_url": "https://mirror.alpix.eu/endeavouros/repo/endeavouros/x86_64/", "regex": "EndeavourOS_.*\\.iso" }
+          "latest": {
+            "page_url": "https://mirror.alpix.eu/endeavouros/repo/endeavouros/x86_64/",
+            "regex": "EndeavourOS_.*\\.iso"
+          }
         }
       }
     },
@@ -90,33 +171,68 @@
           "label": "Fedora",
           "releases": {
             "44": {
-              "workstation": { "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso", "file": "Fedora-Workstation-Live-44-1.7.x86_64.iso" },
-              "server-dvd":  { "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso", "file": "Fedora-Server-dvd-x86_64-44-1.7.iso" }
+              "workstation": {
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso",
+                "file": "Fedora-Workstation-Live-44-1.7.x86_64.iso"
+              },
+
+              "server-dvd": {
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso",
+                "file": "Fedora-Server-dvd-x86_64-44-1.7.iso"
+              }
             },
+
             "43": {
-              "workstation": { "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-43-1.6.x86_64.iso", "file": "Fedora-Workstation-Live-43-1.6.x86_64.iso" }
+              "workstation": {
+                "url": "https://download.fedoraproject.org/pub/fedora/linux/releases/43/Workstation/x86_64/iso/Fedora-Workstation-Live-43-1.6.x86_64.iso",
+                "file": "Fedora-Workstation-Live-43-1.6.x86_64.iso"
+              }
             }
           }
         },
+
         "almalinux": {
           "label": "AlmaLinux 9",
           "variants": {
-            "dvd":     { "url": "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9-latest-x86_64-dvd.iso",     "file": "AlmaLinux-9-latest-x86_64-dvd.iso" },
-            "minimal": { "url": "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9-latest-x86_64-minimal.iso", "file": "AlmaLinux-9-latest-x86_64-minimal.iso" }
+            "dvd": {
+              "url": "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9-latest-x86_64-dvd.iso",
+              "file": "AlmaLinux-9-latest-x86_64-dvd.iso"
+            },
+
+            "minimal": {
+              "url": "https://repo.almalinux.org/almalinux/9/isos/x86_64/AlmaLinux-9-latest-x86_64-minimal.iso",
+              "file": "AlmaLinux-9-latest-x86_64-minimal.iso"
+            }
           }
         },
+
         "rockylinux": {
           "label": "Rocky Linux 9",
           "variants": {
-            "dvd":     { "url": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-dvd.iso",     "file": "Rocky-9-latest-x86_64-dvd.iso" },
-            "minimal": { "url": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-minimal.iso", "file": "Rocky-9-latest-x86_64-minimal.iso" }
+            "dvd": {
+              "url": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-dvd.iso",
+              "file": "Rocky-9-latest-x86_64-dvd.iso"
+            },
+
+            "minimal": {
+              "url": "https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9-latest-x86_64-minimal.iso",
+              "file": "Rocky-9-latest-x86_64-minimal.iso"
+            }
           }
         },
+
         "opensuse": {
           "label": "openSUSE",
           "variants": {
-            "tumbleweed": { "url": "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso", "file": "openSUSE-Tumbleweed-DVD-x86_64-Current.iso" },
-            "leap-15.6":  { "url": "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Media.iso", "file": "openSUSE-Leap-15.6-DVD-x86_64-Media.iso" }
+            "tumbleweed": {
+              "url": "https://download.opensuse.org/tumbleweed/iso/openSUSE-Tumbleweed-DVD-x86_64-Current.iso",
+              "file": "openSUSE-Tumbleweed-DVD-x86_64-Current.iso"
+            },
+
+            "leap-15.6": {
+              "url": "https://download.opensuse.org/distribution/leap/15.6/iso/openSUSE-Leap-15.6-DVD-x86_64-Media.iso",
+              "file": "openSUSE-Leap-15.6-DVD-x86_64-Media.iso"
+            }
           }
         }
       }
@@ -128,22 +244,45 @@
         "linuxmint": {
           "label": "Linux Mint",
           "variants": {
-            "cinnamon": { "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso", "file": "linuxmint-22.3-cinnamon-64bit.iso" },
-            "xfce":     { "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-xfce-64bit.iso",     "file": "linuxmint-22.3-xfce-64bit.iso" },
-            "mate":     { "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-mate-64bit.iso",     "file": "linuxmint-22.3-mate-64bit.iso" }
+            "cinnamon": {
+              "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso",
+              "file": "linuxmint-22.3-cinnamon-64bit.iso"
+            },
+
+            "xfce": {
+              "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-xfce-64bit.iso",
+              "file": "linuxmint-22.3-xfce-64bit.iso"
+            },
+
+            "mate": {
+              "url": "https://mirrors.kernel.org/linuxmint/stable/22.3/linuxmint-22.3-mate-64bit.iso",
+              "file": "linuxmint-22.3-mate-64bit.iso"
+            }
           }
         },
+
         "popos": {
           "label": "Pop!_OS",
           "variants": {
-            "nvidia":  { "url": "https://iso.pop-os.org/24.04/amd64/nvidia/12/pop-os_24.04_amd64_nvidia_12.iso",  "file": "pop-os_24.04_amd64_nvidia_12.iso" },
-            "intel-amd": { "url": "https://iso.pop-os.org/24.04/amd64/intel/12/pop-os_24.04_amd64_intel_12.iso", "file": "pop-os_24.04_amd64_intel_12.iso" }
+            "nvidia": {
+              "url": "https://iso.pop-os.org/24.04/amd64/nvidia/12/pop-os_24.04_amd64_nvidia_12.iso",
+              "file": "pop-os_24.04_amd64_nvidia_12.iso"
+            },
+
+            "intel-amd": {
+              "url": "https://iso.pop-os.org/24.04/amd64/intel/12/pop-os_24.04_amd64_intel_12.iso",
+              "file": "pop-os_24.04_amd64_intel_12.iso"
+            }
           }
         },
+
         "zorin": {
           "label": "Zorin OS 17",
           "variants": {
-            "core": { "url": "https://mirrors.kernel.org/zorinos-isos/17/Zorin-OS-17.3-Core-64-bit.iso", "file": "Zorin-OS-17.3-Core-64-bit.iso" }
+            "core": {
+              "url": "https://mirrors.kernel.org/zorinos-isos/17/Zorin-OS-17.3-Core-64-bit.iso",
+              "file": "Zorin-OS-17.3-Core-64-bit.iso"
+            }
           }
         }
       }
@@ -156,18 +295,54 @@
           "label": "FreeBSD",
           "releases": {
             "14.4": {
-              "dvd1": { "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-dvd1.iso", "file": "FreeBSD-14.4-RELEASE-amd64-dvd1.iso" },
-              "disc1": { "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-disc1.iso", "file": "FreeBSD-14.4-RELEASE-amd64-disc1.iso" }
+              "dvd1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-dvd1.iso",
+                "file": "FreeBSD-14.4-RELEASE-amd64-dvd1.iso"
+              },
+
+              "disc1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-disc1.iso",
+                "file": "FreeBSD-14.4-RELEASE-amd64-disc1.iso"
+              }
             },
+
             "15.0": {
-              "dvd1": { "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso", "file": "FreeBSD-15.0-RELEASE-amd64-dvd1.iso" },
-              "disc1": { "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso", "file": "FreeBSD-15.0-RELEASE-amd64-disc1.iso" }
+              "dvd1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso",
+                "file": "FreeBSD-15.0-RELEASE-amd64-dvd1.iso"
+              },
+
+              "disc1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso",
+                "file": "FreeBSD-15.0-RELEASE-amd64-disc1.iso"
+              }
             }
           }
         },
-        "ghostbsd": { "label": "GhostBSD", "latest": { "url": "https://download.ghostbsd.org/releases/amd64/latest/GhostBSD-24.04.1.iso", "file": "GhostBSD-latest.iso" } },
-        "openbsd":  { "label": "OpenBSD",  "install": { "url": "https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso", "file": "install78.iso" } },
-        "netbsd":   { "label": "NetBSD",   "latest":  { "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-10.1/images/NetBSD-10.1-amd64.iso", "file": "NetBSD-10.1-amd64.iso" } }
+
+        "ghostbsd": {
+          "label": "GhostBSD",
+          "latest": {
+            "url": "https://download.ghostbsd.org/releases/amd64/latest/GhostBSD-24.04.1.iso",
+            "file": "GhostBSD-latest.iso"
+          }
+        },
+
+        "openbsd": {
+          "label": "OpenBSD",
+          "install": {
+            "url": "https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso",
+            "file": "install78.iso"
+          }
+        },
+
+        "netbsd": {
+          "label": "NetBSD",
+          "latest": {
+            "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-10.1/images/NetBSD-10.1-amd64.iso",
+            "file": "NetBSD-10.1-amd64.iso"
+          }
+        }
       }
     },
 
@@ -176,11 +351,18 @@
       "children": {
         "tails": {
           "label": "Tails",
-          "latest": { "page_url": "https://tails.net/torrents/files/", "regex": "tails-amd64-[0-9.]+\\.img" }
+          "latest": {
+            "page_url": "https://tails.net/torrents/files/",
+            "regex": "tails-amd64-[0-9.]+\\.img"
+          }
         },
+
         "whonix": {
           "label": "Whonix (VirtualBox OVA)",
-          "latest": { "page_url": "https://www.whonix.org/wiki/VirtualBox/XFCE", "regex": "Whonix-XFCE-[0-9.]+\\.ova" }
+          "latest": {
+            "page_url": "https://www.whonix.org/wiki/VirtualBox/XFCE",
+            "regex": "Whonix-XFCE-[0-9.]+\\.ova"
+          }
         }
       }
     },
@@ -190,19 +372,67 @@
       "children": {
         "clonezilla": {
           "label": "Clonezilla",
-          "latest": { "url": "https://sourceforge.net/projects/clonezilla/files/clonezilla_live_stable/3.3.1-35/clonezilla-live-3.3.1-35-amd64.iso/download", "file": "clonezilla-live-3.3.1-35-amd64.iso" }
+          "latest": {
+            "url": "https://sourceforge.net/projects/clonezilla/files/clonezilla_live_stable/3.3.1-35/clonezilla-live-3.3.1-35-amd64.iso/download",
+            "file": "clonezilla-live-3.3.1-35-amd64.iso"
+          }
         },
+
         "gparted": {
           "label": "GParted Live",
-          "latest": { "url": "https://sourceforge.net/projects/gparted/files/gparted-live-stable/1.8.1-3/gparted-live-1.8.1-3-amd64.iso/download", "file": "gparted-live-1.8.1-3-amd64.iso" }
+          "latest": {
+            "url": "https://sourceforge.net/projects/gparted/files/gparted-live-stable/1.8.1-3/gparted-live-1.8.1-3-amd64.iso/download",
+            "file": "gparted-live-1.8.1-3-amd64.iso"
+          }
         },
+
         "systemrescue": {
           "label": "SystemRescue",
-          "latest": { "url": "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/13.00/systemrescue-13.00-amd64.iso/download", "file": "systemrescue-13.00-amd64.iso" }
+          "latest": {
+            "url": "https://sourceforge.net/projects/systemrescuecd/files/sysresccd-x86/13.00/systemrescue-13.00-amd64.iso/download",
+            "file": "systemrescue-13.00-amd64.iso"
+          }
         },
+
         "memtest86plus": {
           "label": "Memtest86+",
-          "latest": { "url": "https://www.memtest.org/download/v8.00/mt86plus_8.00.binaries.zip", "file": "mt86plus_8.00.binaries.zip" }
+          "latest": {
+            "url": "https://www.memtest.org/download/v8.00/mt86plus_8.00.binaries.zip",
+            "file": "mt86plus_8.00.binaries.zip"
+          }
+        }
+      }
+    }
+  },
+
+  "windows": {
+    "label": "[UNOFFICIAL, USE AT OWN RISK] Windows ISOs",
+    "children": {
+      "windows10ltsc2021": {
+        "label": "Windows 10 LTSC 2021",
+        "latest": {
+          "url": "https://archive.org/download/win10ltsc2021enx86/en-us_windows_10_enterprise_ltsc_2021_x86_dvd_9f4aa95f.iso"
+        }
+      },
+
+      "windows10ltsc2019": {
+        "label": "[MODIFIED] Windows 10 LTSC 2019 + Tweaks",
+        "latest": {
+          "url": "https://archive.org/download/windows-10-ltsc-2019-with-microsoft-edge/Windows%2010%20LTSC%202019%20With%20Microsoft%20Edge%20and%20Some%20Tweaks.iso"
+        }
+      },
+
+      "windows1125h2": {
+        "label": "Windows 11 25H2",
+        "latest": {
+          "url": "https://archive.org/download/os-win-11-25-h-2-english-x-64/OS_Win11_25H2_English_x64.iso"
+        }
+      },
+
+      "tiny1123h2": {
+        "label": "[MODIFIED, FOR LOW BLOAT] Tiny11 23H2",
+        "latest": {
+          "url": "https://archive.org/download/tiny-11-NTDEV/tiny11%2023H2%20x64.iso"
         }
       }
     }
