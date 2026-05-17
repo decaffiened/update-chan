@@ -36,15 +36,13 @@ The regex is matched against the raw HTML of page_url. Results are sorted descen
 
 Everything lives under `"linux"` at the top level. Inside that, you nest **group nodes** and **leaf nodes.** A group node has a `"label"` and either `"children"`, `"releases"`, or `"variants"` (or bare named keys). A leaf node is the `{ "url", "file" }` or `{ "page_url", "regex" }` pair above.
 
+```
 linux
-
 └── my_group          ← group node (shows as [+] in menu, navigates into)
-
     └── my_distro     ← group node
-    
         └── releases / variants / bare keys
-        
             └── { url, file }   ← leaf node (shows as [ISO], downloads)
+```
             
 update-chan recognises three ways to organise leaves under a distro node:
 
