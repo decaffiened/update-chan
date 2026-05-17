@@ -184,7 +184,7 @@ These keys are used internally by update-chan and **will** be ignored or skipped
 - For scraped entries: regex tested against the live page and matches only the ISO, not checksums or torrents
 - JSON is valid — run it through [jsonlint](https://jsonlint.com/) if unsure
 
-# wait, this is v8.0, but it's the first thing here. why?
+# wait, this is v9.0, but it's the first thing here. why?
 Uh.... I was too lazy to show all versions of update-chan here and I made the repository late.
 
 # and a note from me
