@@ -184,6 +184,8 @@ Uh.... I was too lazy to show all versions of update-chan here and I made the re
 
 # and a note from me
 Thank you for reading all this! If some of this code looks AI, know that it was partially vibecoded. Don't worry, though- I still coded almost all of it!
+
 Enjoy using update-chan,
+
 decaffiened.
 [Check out my website!](https://decaffiened.neocities.org)
