@@ -1,6 +1,9 @@
 # update-chan
 (currently a) Windows Powershell utility to fetch and install multiple operating system ISO installers onto any Ventoy disk and keep them updated. Simple, easy, and clean!
 
+<img width="1194" height="592" alt="{A3F079A3-3A7F-4DD4-9551-48C13B79AC16}" src="https://github.com/user-attachments/assets/0f3264ab-c2ef-4afc-b33c-3838ef938284" />
+
+
 # how to use update-chan
 1. Clone the repository anywhere. I have mine inside the Ventoy drive -> /ventoy folder -> custom /tools folder.
 Clone it by getting Git or Git For Windows and running `git clone https://github.com/decaffiened/update-chan` in your Windows Terminal, Command Prompt or Powershell.
