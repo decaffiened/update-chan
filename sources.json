@@ -1,10 +1,68 @@
 {
   "schema_version": 5,
-  "generated": "2026-05-17",
+  "generated": "2026-05-20",
   "notes": {
     "design": "Dynamic menu generation + verified direct links",
-    "verified": "All links verified against official release pages May 2026"
+    "verified": "All links re-verified against official release pages May 2026"
   },
+
+  "bsd": {
+      "label": "BSD",
+      "children": {
+        "freebsd": {
+          "label": "FreeBSD",
+          "releases": {
+            "14.4": {
+              "dvd1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-dvd1.iso",
+                "file": "FreeBSD-14.4-RELEASE-amd64-dvd1.iso"
+              },
+
+              "disc1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-disc1.iso",
+                "file": "FreeBSD-14.4-RELEASE-amd64-disc1.iso"
+              }
+            },
+
+            "15.0": {
+              "dvd1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso",
+                "file": "FreeBSD-15.0-RELEASE-amd64-dvd1.iso"
+              },
+
+              "disc1": {
+                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso",
+                "file": "FreeBSD-15.0-RELEASE-amd64-disc1.iso"
+              }
+            }
+          }
+        },
+
+        "ghostbsd": {
+          "label": "GhostBSD",
+          "latest": {
+            "url": "https://download.fr.ghostbsd.org/releases/amd64/26.1-R15.0p2/GhostBSD-26.1-R15.0p2.iso",
+            "file": "GhostBSD-latest.iso"
+          }
+        },
+
+        "openbsd": {
+          "label": "OpenBSD",
+          "install": {
+            "url": "https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso",
+            "file": "install78.iso"
+          }
+        },
+
+        "netbsd": {
+          "label": "NetBSD",
+          "latest": {
+            "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-10.1/images/NetBSD-10.1-amd64.iso",
+            "file": "NetBSD-10.1-amd64.iso"
+          }
+        }
+      }
+    },
 
   "linux": {
     "ubuntu_family": {
@@ -85,8 +143,8 @@
           "label": "Debian",
           "variants": {
             "trixie-netinst": {
-              "url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.4.0-amd64-netinst.iso",
-              "file": "debian-13.4.0-amd64-netinst.iso"
+              "url": "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso",
+              "file": "debian-13.5.0-amd64-netinst.iso"
             },
 
             "bookworm-netinst": {
@@ -277,70 +335,12 @@
         },
 
         "zorin": {
-          "label": "Zorin OS 17",
+          "label": "Zorin OS 18",
           "variants": {
             "core": {
-              "url": "https://mirrors.kernel.org/zorinos-isos/17/Zorin-OS-17.3-Core-64-bit.iso",
-              "file": "Zorin-OS-17.3-Core-64-bit.iso"
+              "url": "https://mirrors.kernel.org/zorinos-isos/18/Zorin-OS-18-Core-64-bit.iso",
+              "file": "Zorin-OS-18-Core-64-bit.iso"
             }
-          }
-        }
-      }
-    },
-
-    "bsd": {
-      "label": "BSD",
-      "children": {
-        "freebsd": {
-          "label": "FreeBSD",
-          "releases": {
-            "14.4": {
-              "dvd1": {
-                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-dvd1.iso",
-                "file": "FreeBSD-14.4-RELEASE-amd64-dvd1.iso"
-              },
-
-              "disc1": {
-                "url": "https://download.freebsd.org/releases/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-amd64-disc1.iso",
-                "file": "FreeBSD-14.4-RELEASE-amd64-disc1.iso"
-              }
-            },
-
-            "15.0": {
-              "dvd1": {
-                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso",
-                "file": "FreeBSD-15.0-RELEASE-amd64-dvd1.iso"
-              },
-
-              "disc1": {
-                "url": "https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-disc1.iso",
-                "file": "FreeBSD-15.0-RELEASE-amd64-disc1.iso"
-              }
-            }
-          }
-        },
-
-        "ghostbsd": {
-          "label": "GhostBSD",
-          "latest": {
-            "url": "https://download.ghostbsd.org/releases/amd64/latest/GhostBSD-24.04.1.iso",
-            "file": "GhostBSD-latest.iso"
-          }
-        },
-
-        "openbsd": {
-          "label": "OpenBSD",
-          "install": {
-            "url": "https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso",
-            "file": "install78.iso"
-          }
-        },
-
-        "netbsd": {
-          "label": "NetBSD",
-          "latest": {
-            "url": "https://cdn.netbsd.org/pub/NetBSD/NetBSD-10.1/images/NetBSD-10.1-amd64.iso",
-            "file": "NetBSD-10.1-amd64.iso"
           }
         }
       }
